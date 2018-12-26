@@ -34,18 +34,18 @@ def add_numbers_post():
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 
-def multiple_numbers_post():
+def multiply_numbers_post():
 	  # --> ['5', '6', '8']
 	  # print(type(request.form['text']))
 	  if request.method == 'GET':
-	  	return render_template('multiple_numbers.html')
+	  	return render_template('multiply_numbers.html')
 	  elif request.method == 'POST':
   	      print(request.form['text'].split())
   	      total = 1
   	      try:
   	      	for str_num in request.form['text'].split():
   	      		total *= int(str_num)
-  	      	return render_template('multiple_numbers.html', result=str(total))
+  	      	return render_template('multiply_numbers.html', result=str(total))
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 
